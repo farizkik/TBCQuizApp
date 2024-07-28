@@ -9,13 +9,24 @@ html, body {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #8AB170;
-  color: white;
+  color: #342716;
+}
+
+h1 {
+  font-size: 25px;
+  margin-bottom: 18px;
+}
+
+#intro-img {
+  width: 350px;
+  height: 401px;
+  border-radius: 50px;
 }
 
 #app {
@@ -48,10 +59,6 @@ body {
 
 .hidden {
   display: none;
-}
-
-h1, h2, h3 {
-  color: black;
 }
 
 .intro-image, .question-gif {
