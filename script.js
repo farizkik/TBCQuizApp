@@ -1,6 +1,6 @@
 const quizData = [
     {
-        question: "Question 1",
+        question: "Anda sedang ada di bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
         gif: "question1.gif",
         options: ["Option 1A", "Option 1B"],
         correctAnswer: 0
