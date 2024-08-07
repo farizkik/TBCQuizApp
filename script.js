@@ -45,11 +45,16 @@ const quizData = [
         correctAnswer: 1
     },
     {
-        question: ```Mertuamu (yang kemarin terdiagnosis tuberkulosis) tiba-tiba berkunjung ke rumahmu!
-Kamu	: “Ibu masih minum obat anti tuberkulosisnya bu?”
-Mertua	: “Kan udah ga batuk lagi. Buat apa minum obat? Oh, iya, mana cucu ibu?”
-Kamu	: “Ibu masih minum obat anti tuberkulosisnya bu?”
-Mertua	: “Kan udah ga batuk lagi. Buat apa minum obat? Oh, iya, mana cucu ibu?”```,
+        question: "Rumahmu gelap dan sumpek….",
+        gif: "question5.gif",
+        options: [
+            "Buka jendela untuk meningkatkan ventilasi dan pencahayaan.",
+            "Yaudah, sih… Toh, aku sudah sapu dan pel rumahku setiap hari."
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: 'Mertuamu (yang kemarin terdiagnosis tuberkulosis) tiba-tiba berkunjung ke rumahmu!\nKamu	: “Ibu masih minum obat anti tuberkulosisnya bu?”\nMertua	: “Kan udah ga batuk lagi. Buat apa minum obat? Oh, iya, mana cucu ibu?”\nKamu	: “Ibu masih minum obat anti tuberkulosisnya bu?”\nMertua	: “Kan udah ga batuk lagi. Buat apa minum obat? Oh, iya, mana cucu ibu?”',
         gif: "question5.gif",
         options: [
             "Biarkan ia bertemu anakmu.",
