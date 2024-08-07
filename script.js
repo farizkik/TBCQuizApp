@@ -1,34 +1,80 @@
 const quizData = [
     {
-        question: "Anda sedang ada di bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        question: "Bayimu baru saja lahir dan sedang menangis. Ia tampak lapar sehingga neneknya mau memberi anakmu kental manis.",
         gif: "question1.gif",
-        options: ["Option 1A", "Option 1B"],
-        correctAnswer: 0
+        options: [
+            "Biarkan, kental manis gizinya kan setara susu.",
+            "Stop! Anakku hanya minum ASI atau susu formula."
+        ],
+        correctAnswer: 1
     },
     {
-        question: "Question 2",
+        question: "Bayimu sekarang berusia 1 bulan. Apa jurus andalanmu untuk menjaga kekebalan tubuhnya?",
         gif: "question2.gif",
-        options: ["Option 2A", "Option 2B"],
-        correctAnswer: 1
+        options: [
+            "Berikan imunisasi dasar lengkap anak, termasuk vaksin BCG.",
+            "Memberikan minyak ikan saja sudah lebih dari cukup."
+        ],
+        correctAnswer: 0,
     },
     {
-        question: "Question 3",
+        question: "Paman anakmu lagi makan nasi rendang. Lalu dia akan menyuapi anakmu makanan dari piringnya….",
         gif: "question3.gif",
-        options: ["Option 3A", "Option 3B"],
+        options: [
+            "Ayo, nak, makan yang lahap.",
+            "Jangan, anakku baru bisa makan MPASI."
+        ],
         correctAnswer: 0
     },
     {
-        question: "Question 4",
+        question: "Kamu akan kondangan dan mau menitipkan anakmu ke mertua, tetapi ternyata mertuamu batuk-batuk, demam, lemas, dan tampak kurus. Kamu akan…",
         gif: "question4.gif",
-        options: ["Option 4A", "Option 4B"],
+        options: [
+            "Laporkan kondisi mertuamu kepada fasilitas kesehatan setempat.",
+            "Tetap titipkan anakmu kepada mertua"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Suatu hari, kamu mendapat kabar bahwa teman sebangku anakmu menderita sakit tuberkulosis.",
+        gif: "question5.gif",
+        options: [
+            "Syukurlah, untung anakku ga sakit juga!",
+            "Aduh, anakku harus segera diberi terapi pencegahan tuberkulosis."
+        ],
         correctAnswer: 1
     },
     {
-        question: "Question 5",
+        question: ```Mertuamu (yang kemarin terdiagnosis tuberkulosis) tiba-tiba berkunjung ke rumahmu!
+Kamu	: “Ibu masih minum obat anti tuberkulosisnya bu?”
+Mertua	: “Kan udah ga batuk lagi. Buat apa minum obat? Oh, iya, mana cucu ibu?”
+Kamu	: “Ibu masih minum obat anti tuberkulosisnya bu?”
+Mertua	: “Kan udah ga batuk lagi. Buat apa minum obat? Oh, iya, mana cucu ibu?”```,
         gif: "question5.gif",
-        options: ["Option 5A", "Option 5B"],
+        options: [
+            "Biarkan ia bertemu anakmu.",
+            "Maaf ya, Bu, belum bisa ketemu dulu. Minum obatnya harus dilanjut, Bu."
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "Sudah saatnya check up bulanan anakmu di Posyandu!",
+        gif: "question5.gif",
+        options: [
+            "Pergi check-up dengan semangat!",
+            "Ah, ngapain cek. Anak saya sehat!"
+        ],
         correctAnswer: 0
-    }
+    },
+    {
+        question: "Saat berkunjung ke Posyandu, seseorang batuk-batuk dan meludah sembarangan.",
+        gif: "question5.gif",
+        options: [
+            "Menyingkir dan tidak peduli.",
+            "Menegurnya dan mengedukasi mengenai etika batuk yang benar."
+        ],
+        correctAnswer: 1
+    },
 ];
 
 let currentQuestion = 0;
