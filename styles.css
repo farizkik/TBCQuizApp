@@ -23,7 +23,11 @@ body {
 
 h1 {
   font-size: 20px;
-  margin-bottom: 18px;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 18px;
+  line-height: 1;
 }
 
 #intro-img {
@@ -32,14 +36,18 @@ h1 {
   max-height: 360px;
   height: 50%;
   border-radius: 50px;
-  margin-bottom: 20px;
 }
 
-.question-gif {
-  max-width: 315px;
+.question-asset {
+  max-width: 250px;
   width: 100%;
   height: auto;
-  border-radius: 50px;
+}
+
+.ending-asset {
+  max-width: 330px;
+  width: 100%;
+  height: auto;
 }
 
 #app {
@@ -73,7 +81,7 @@ h1 {
   display: none;
 }
 
-button {
+.primary-button {
   font-family: "Bangers", sans-serif;
   width: 178px;
   height: 67px;
@@ -94,7 +102,7 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.primary-button:hover {
   background-color: #cfc6a8;
   color: #cfc6a8;
 }
@@ -106,18 +114,40 @@ button:hover {
 }
 
 .option {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 50px;
+  background-color: #EDE6CF;
+  background-color: #EDE6CF;
+  border: none;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 15px;
   margin: 5px 0;
-  width: 80%;
+  width: 350px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .option:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+h3 {
+  font-family: "Bangers", sans-serif;
+  color: #EDE6CF;
+  text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+  font-size: 20px;
+}
+
+.margin-top {
+  margin-top: 35px;
+}
+
+.retry {
+  width: 100px;
+  padding: 0;
+  border-radius: 100px;
+  height: 100px;
+  font-size: 24px;
 }
 
 @media (max-width: 600px) {

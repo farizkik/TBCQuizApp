@@ -15,29 +15,52 @@
         <div id="container" class="page">
             <div id="intro">
                 <h1>
-                    TBC diam-diam merayap di antara masyarakat!
+                    TBC diam-diam merayap
+                    <br>
+                    di antara masyarakat!
                 </h1>
-                <img id="intro-img" src="intro-image.jpg" alt="Quiz Introduction" class="intro-image">
+                <img id="intro-img" src="intro-image.png" alt="Quiz Introduction" class="intro-image">
                 <h1>
-                    Anda memiliki misi untuk melindungi bayi anda dari TBC.
+                    Anda memiliki misi untuk
+                    <br>
+                    melindungi balita anda
+                    <br>
+                    dari bahaya TBC.
                 </h1>
-                <button id="start-btn">
+                <button class="primary-button margin-top" id="start-btn">
                     Mulai!
                 </button>
             </div>
         </div>
 
+        <div id="loading" class="page hidden">
+            <img id="loading-img" src="loading-screen.png" alt="Loading Screen" class="question-asset">
+            <h3 id="loading-text">Memuat Petualangan...</h3>
+        </div>
+
         <div id="quiz" class="page hidden">
             <h1 id="question"></h1>
-            <img id="question-gif" src="" alt="Question GIF" class="question-gif">
+            <img id="question-asset" src="" alt="Question GIF" class="question-asset">
             <div id="options"></div>
             <button id="next-btn" class="hidden">Next</button>
         </div>
 
         <div id="result" class="page hidden">
-            <h2>Quiz Results</h2>
             <p id="score"></p>
-            <button id="restart-btn">Restart Quiz</button>
+            <h1>
+                Bagikan hasil anda!
+                <br>
+                #KompasTualang
+            </h1>
+            <img src="ending-image.png" alt="Ending Image" class="ending-asset">
+            <h2>
+                Geser dan persiapkan
+                <br>
+                petualangan bersama si kecil.
+            </h2>
+            <button id="restart-btn" class="primary-button retry">
+                Mulai Ulang
+            </button>
         </div>
     </div>
 

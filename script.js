@@ -1,7 +1,7 @@
 const quizData = [
     {
-        question: "Bayimu baru saja lahir dan sedang menangis. Ia tampak lapar sehingga neneknya mau memberi anakmu kental manis.",
-        gif: "question1.gif",
+        question: "Bayimu baru saja lahir dan sedang\nmenangis. Ia tampak lapar\nsehingga neneknya mau memberi\nanakmu kental manis.",
+        gif: "quiz-pic.png",
         options: [
             "Biarkan, kental manis gizinya kan setara susu.",
             "Stop! Anakku hanya minum ASI atau susu formula."
@@ -10,7 +10,7 @@ const quizData = [
     },
     {
         question: "Bayimu sekarang berusia 1 bulan. Apa jurus andalanmu untuk menjaga kekebalan tubuhnya?",
-        gif: "question2.gif",
+        gif: "quiz-pic.png",
         options: [
             "Berikan imunisasi dasar lengkap anak, termasuk vaksin BCG.",
             "Memberikan minyak ikan saja sudah lebih dari cukup."
@@ -19,7 +19,7 @@ const quizData = [
     },
     {
         question: "Paman anakmu lagi makan nasi rendang. Lalu dia akan menyuapi anakmu makanan dari piringnya….",
-        gif: "question3.gif",
+        gif: "quiz-pic.png",
         options: [
             "Ayo, nak, makan yang lahap.",
             "Jangan, anakku baru bisa makan MPASI."
@@ -28,7 +28,7 @@ const quizData = [
     },
     {
         question: "Kamu akan kondangan dan mau menitipkan anakmu ke mertua, tetapi ternyata mertuamu batuk-batuk, demam, lemas, dan tampak kurus. Kamu akan…",
-        gif: "question4.gif",
+        gif: "quiz-pic.png",
         options: [
             "Laporkan kondisi mertuamu kepada fasilitas kesehatan setempat.",
             "Tetap titipkan anakmu kepada mertua"
@@ -37,7 +37,7 @@ const quizData = [
     },
     {
         question: "Suatu hari, kamu mendapat kabar bahwa teman sebangku anakmu menderita sakit tuberkulosis.",
-        gif: "question5.gif",
+        gif: "quiz-pic.png",
         options: [
             "Syukurlah, untung anakku ga sakit juga!",
             "Aduh, anakku harus segera diberi terapi pencegahan tuberkulosis."
@@ -46,7 +46,7 @@ const quizData = [
     },
     {
         question: "Rumahmu gelap dan sumpek….",
-        gif: "question5.gif",
+        gif: "quiz-pic.png",
         options: [
             "Buka jendela untuk meningkatkan ventilasi dan pencahayaan.",
             "Yaudah, sih… Toh, aku sudah sapu dan pel rumahku setiap hari."
@@ -55,7 +55,7 @@ const quizData = [
     },
     {
         question: 'Mertuamu (yang kemarin terdiagnosis tuberkulosis) tiba-tiba berkunjung ke rumahmu!\nKamu	: “Ibu masih minum obat anti tuberkulosisnya bu?”\nMertua	: “Kan udah ga batuk lagi. Buat apa minum obat? Oh, iya, mana cucu ibu?”\nKamu	: “Ibu masih minum obat anti tuberkulosisnya bu?”\nMertua	: “Kan udah ga batuk lagi. Buat apa minum obat? Oh, iya, mana cucu ibu?”',
-        gif: "question5.gif",
+        gif: "quiz-pic.png",
         options: [
             "Biarkan ia bertemu anakmu.",
             "Maaf ya, Bu, belum bisa ketemu dulu. Minum obatnya harus dilanjut, Bu."
@@ -64,7 +64,7 @@ const quizData = [
     },
     {
         question: "Sudah saatnya check up bulanan anakmu di Posyandu!",
-        gif: "question5.gif",
+        gif: "quiz-pic.png",
         options: [
             "Pergi check-up dengan semangat!",
             "Ah, ngapain cek. Anak saya sehat!"
@@ -73,7 +73,7 @@ const quizData = [
     },
     {
         question: "Saat berkunjung ke Posyandu, seseorang batuk-batuk dan meludah sembarangan.",
-        gif: "question5.gif",
+        gif: "quiz-pic.png",
         options: [
             "Menyingkir dan tidak peduli.",
             "Menegurnya dan mengedukasi mengenai etika batuk yang benar."
@@ -86,13 +86,15 @@ let currentQuestion = 0;
 let score = 0;
 
 const introPage = document.getElementById("intro");
+const loadingPage = document.getElementById("loading");
+const loadingText = document.getElementById("loading-text");
 const quizPage = document.getElementById("quiz");
 const resultPage = document.getElementById("result");
 const startBtn = document.getElementById("start-btn");
 const nextBtn = document.getElementById("next-btn");
 const restartBtn = document.getElementById("restart-btn");
 const questionElement = document.getElementById("question");
-const questionGif = document.getElementById("question-gif");
+const questionGif = document.getElementById("question-asset");
 const optionsElement = document.getElementById("options");
 const scoreElement = document.getElementById("score");
 
@@ -102,13 +104,30 @@ restartBtn.addEventListener("click", restartQuiz);
 
 function startQuiz() {
     introPage.classList.add("hidden");
-    quizPage.classList.remove("hidden");
-    loadQuestion();
+    loadingPage.classList.remove("hidden");
+    loading();
 }
 
-    function loadQuestion() {
+function loading(){
+    let loadingCounter = 1;
+    const loadingText = document.getElementById("loading-text");
+    const loadingInterval = setInterval(() => {
+        loadingText.textContent = "Memuat Petualangan" + ".".repeat(loadingCounter % 4);
+        loadingCounter++;
+    }, 500);
+
+    setTimeout(() => {
+        loadingPage.classList.add("hidden");
+        quizPage.classList.remove("hidden");
+        loadQuestion();
+        clearInterval(loadingInterval);
+    }, 1);
+}
+
+function loadQuestion() {
     const question = quizData[currentQuestion];
     questionElement.textContent = question.question;
+    questionElement.innerHTML = question.question.replace(/\n/g, '<br>');
     questionGif.src = question.gif;
     optionsElement.innerHTML = "";
 
@@ -134,8 +153,7 @@ function selectOption(index) {
         options[index].style.backgroundColor = "#FFB6C1";
         options[quizData[currentQuestion].correctAnswer].style.backgroundColor = "#90EE90";
     }
-
-    nextBtn.classList.remove("hidden");
+    nextQuestion();
 }
 
 function nextQuestion() {
@@ -150,7 +168,7 @@ function nextQuestion() {
 function showResult() {
     quizPage.classList.add("hidden");
     resultPage.classList.remove("hidden");
-    scoreElement.textContent = `You scored ${score} out of ${quizData.length}!`;
+    scoreElement.textContent = `Skor anda ${score} dari ${quizData.length}!`;
 }
 
 function restartQuiz() {
