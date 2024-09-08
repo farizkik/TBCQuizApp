@@ -39,10 +39,37 @@
         </div>
 
         <div id="quiz" class="page hidden">
-            <h1 id="question"></h1>
+            <h1 id="question" class="infos"></h1>
             <img id="question-asset" src="" alt="Question GIF" class="question-asset">
             <div id="options"></div>
             <button id="next-btn" class="hidden">Next</button>
+        </div>
+
+        <div id="answer-info" class="page hidden">
+            <div id="info-title" class="answer-title">
+                MANTAP!
+            </div>
+            <img id="info-asset" src="correct-answer.png" alt="Correct Answer" class="question-asset">
+            <div class="answer-subtitle">
+                CEK FAKTANYA!
+            </div>
+            <div class="flex-column ">
+                <div class="flex-row infos">
+                    <img src="compass.png" alt="Correct Answer 1" class="compass-img">
+                    <h2 id="first-info">
+                        TBC adalah penyakit menular yang disebabkan oleh bakteri Mycobacterium tuberculosis.
+                    </h2>
+                </div>
+                <div class="flex-row infos">
+                    <img src="compass.png" alt="Correct Answer 2" class="compass-img">
+                    <h2 id="second-info">
+                        TBC dapat menyerang siapa saja, termasuk balita.
+                    </h2>
+                </div>
+            </div>
+            <button id="correct-btn" class="primary-button next-qs">
+                SELANJUTNYA
+            </button>
         </div>
 
         <div id="result" class="page hidden">
@@ -52,7 +79,17 @@
                 <br>
                 #KompasTualang
             </h1>
-            <img src="ending-image.png" alt="Ending Image" class="ending-asset">
+            <div class="flex-row center">
+                <img id="prev-pic" src="prev-pic.png" class="pic-btn">
+                <div class="image-container" id="imageContainer">
+                    <img id="quiz-result" src="bad-result.png" alt="Image 1" class="image active">
+                    <img src="infograph1.png" alt="Image 2" class="image">
+                    <img src="infograph2.png" alt="Image 3" class="image">
+                    <img src="infograph3.png" alt="Image 3" class="image">
+                    <!-- Add more images as needed -->
+                  </div>
+                <img id="next-pic" src="next-pic.png" class="pic-btn">
+            </div>
             <h2>
                 Geser dan persiapkan
                 <br>
