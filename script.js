@@ -36,7 +36,7 @@ const quizData = [
             "Memberikan makanan dewasa (seperti nasi rendang) kepada bayi dapat berisiko karena terlalu berat untuk pencernaan bayi sehingga berpotensi menyebabkan masalah pencernaan, bahkan alergi. Bayi memerlukan makanan yang sesuai dengan tahap perkembangan mereka.",
             "Saat bayi baru mulai makan makanan pendamping asi (MPASI), penting untuk memberikan makanan yang sesuai dengan tahap perkembangan mereka. MPASI dirancang khusus untuk memenuhi kebutuhan nutrisi bayi dan mudah dicerna.",
         ],
-        correctAnswer: 0
+        correctAnswer: 1
     },
     {
         question: "Kamu akan kondangan dan mau menitipkan anakmu ke mertua, tetapi ternyata mertuamu batuk-batuk, demam, lemas, dan tampak kurus. Kamu akan…",
@@ -75,7 +75,7 @@ const quizData = [
             "Memastikan rumah senantiasa bersih, memiliki ventilasi yang baik, dan pencahayaan yang cukup mencegah penyebaran TBC. Ventilasi mengurangi konsentrasi kuman TBC di udara, sementara pencahayaan alami membantu membunuh kuman. ",
             "Membersihkan rumah dengan rutin seperti menyapu dan mengepel penting untuk kebersihan, tetapi tidak cukup untuk mencegah penyebaran TBC. TBC menyebar melalui udara sehingga, tanpa ventilasi yang memadai, kuman dapat tetap berada di ruangan dalam jangka waktu lama.",
         ],
-        correctAnswer: 1
+        correctAnswer: 0
     },
     {
         question: 'Mertuamu (yang kemarin terdiagnosis tuberkulosis) tiba-tiba berkunjung ke rumahmu!\nKamu	: “Ibu masih minum obat anti tuberkulosisnya bu?”\nMertua	: “Kan udah ga batuk lagi. Buat apa minum obat? Oh, iya, mana cucu ibu?”\nKamu	: “Ibu masih minum obat anti tuberkulosisnya bu?”\nMertua	: “Kan udah ga batuk lagi. Buat apa minum obat? Oh, iya, mana cucu ibu?”',
